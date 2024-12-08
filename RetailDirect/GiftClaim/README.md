@@ -56,28 +56,18 @@ bin/magento cache:flush
 
 ### Customer Workflow
 
-1. *After placing an order, customers will see a Claim Your Gift button on the success page.
-2. *Clicking the button redirects them to the Claim Gift Form, where they input:
-   -IMEI
-   -Name
-   -Email
-   -Phone
-   -Address
-3. *The system checks the IMEI from the database:
-   -If valid, an OTP is sent to the customer's email.
-4. *The customer inputs the OTP on the verification form.
-5. *Once verified:
-   -The IMEI is marked as claimed.
-   -A success message is displayed.
+1. After placing an order, customers will see a Claim Your Gift button on the success page.
+2. Clicking the button redirects them to the Claim Gift Form, where they input: IMEI, Name, Email, Phone, Address
+3. The system checks the IMEI from the database. If valid, an OTP is sent to the customer's email.
+4. The customer inputs the OTP on the verification form.
+5. Once verified the IMEI is marked as claimed and a success message is displayed.
 
 ### Admin Workflow
 
-1. *Navigate to `RetailDirect > GiftClaim` in the Magento admin dashboard.
-2. *View the list of all gift claims in a grid.
-3. *Apply `Filters`.
-4. *Add new IMEI entries by providing:
-   -IMEI
-   -Tracking Number
+1. Navigate to `RetailDirect > GiftClaim` in the Magento admin dashboard.
+2. View the list of all gift claims in a grid.
+3. Apply `Filters`.
+4. Add new IMEI entries by providing `IMEI` and `Tracking Number`
 
 ## Technical Details
 
