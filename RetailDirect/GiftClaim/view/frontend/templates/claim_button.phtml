@@ -1,0 +1,19 @@
+<div class="actions-toolbar" style="margin-bottom: 20px;">
+    <div class="primary">
+        <button 
+            type="button" 
+            class="action primary claim-gift-btn" 
+            title="<?= __('Claim Your Gift') ?>"
+        >
+            <?= __('Claim Your Gift') ?>
+        </button>
+    </div>
+</div>
+
+<script type="text/javascript">
+    require(['jquery'], function($) {
+        $('.claim-gift-btn').on('click', function() {
+            window.location.href = '<?= $block->getUrl("retaildirect_giftclaim/index/index") ?>';
+        });
+    });
+</script>

@@ -1,0 +1,19 @@
+<?xml version="1.0" ?>
+<schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Setup/Declaration/Schema/etc/schema.xsd">
+    <table name="retaildirect_giftclaim_giftclaim" resource="default" engine="innodb" comment="retaildirect_giftclaim_giftclaim Table">
+        <column xsi:type="int" name="giftclaim_id" padding="10" unsigned="true" nullable="false" identity="true" comment="Claim Id"/>
+        <constraint xsi:type="primary" referenceId="PRIMARY">
+            <column name="giftclaim_id"/>
+        </constraint>
+        <column name="imei" nullable="false" xsi:type="text" comment="IMEI"/>
+        <column name="is_claimed" nullable="false" xsi:type="boolean" comment="Is Claimed" default="false"/>
+        <column name="claim_date" nullable="true" xsi:type="timestamp" comment="Claim Date" on_update="true"/>
+        <column name="name" nullable="true" xsi:type="varchar" comment="Name" length="255"/>
+        <column name="Address" nullable="true" xsi:type="text" comment="Address"/>
+        <column name="email" nullable="true" xsi:type="varchar" comment="email" length="255"/>
+        <column name="phone" nullable="true" xsi:type="varchar" comment="phone" length="255"/>
+        <column name="trackingnumber" nullable="true" xsi:type="text" comment="Unique Tracking NUmber"/>
+        <column name="created_at" nullable="true" xsi:type="timestamp" comment="created at" default="CURRENT_TIMESTAMP" on_update="false"/>
+        <column name="updated_at" nullable="true" xsi:type="timestamp" comment="updated at" default="CURRENT_TIMESTAMP" on_update="true"/>
+    </table>
+</schema>

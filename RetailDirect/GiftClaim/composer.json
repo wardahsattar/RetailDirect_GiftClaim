@@ -1,0 +1,22 @@
+{
+    "name": "retaildirect/module-giftclaim",
+    "description": "This module deals with the claming of Gift Porducts based on IMEI. The process includes user validation, OTP verification, and backend integration for tracking claims.",
+    "type": "magento2-module",
+    "license": "GPL-3.0",
+    "authors": [
+        {
+            "name": "Wardah Sattar",
+            "email": "wardahsattar6@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {},
+    "autoload": {
+        "files": [
+            "registration.php"
+        ],
+        "psr-4": {
+            "RetailDirect\\GiftClaim\\": ""
+        }
+    }
+}

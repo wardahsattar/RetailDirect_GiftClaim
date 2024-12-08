@@ -1,0 +1,42 @@
+<form class="form" id="otp-verification-form" action="<?= $block->getUrl('retaildirect_giftclaim/otp/verify') ?>" method="post" autocomplete="off">
+    <fieldset class="fieldset">
+        <legend class="legend"><span><?= __('OTP Verification') ?></span></legend><br>
+
+        <input type="hidden" name="form_key" value="<?= $escaper->escapeHtml($block->getFormKey()) ?>">
+
+        <div class="field required">
+            <label for="otp" class="label"><span><?= __('Enter OTP') ?></span></label>
+            <div class="control">
+                <input
+                    type="text"
+                    name="otp"
+                    id="otp"
+                    title="<?= __('Enter the OTP you received') ?>"
+                    class="input-text"
+                    data-validate="{required:true, 'validate-digits':true, 'minlength':6, 'maxlength':6}"
+                    aria-required="true"
+                >
+            </div>
+        </div>
+    </fieldset>
+
+    <div class="actions-toolbar">
+        <div class="primary">
+            <button
+                type="submit"
+                class="action submit primary"
+                title="<?= __('Verify OTP') ?>"
+            >
+                <span><?= __('Verify OTP') ?></span>
+            </button>
+        </div>
+    </div>
+</form>
+
+<script type="text/x-magento-init">
+{
+    "#otp-verification-form": {
+        "validation": {}
+    }
+}
+</script>

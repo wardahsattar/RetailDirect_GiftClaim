@@ -1,0 +1,15 @@
+<?xml version="1.0" ?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Acl/etc/acl.xsd">
+    <acl>
+        <resources>
+            <resource id="Magento_Backend::admin">
+                <resource id="RetailDirect_GiftClaim::GiftClaim" title="GiftClaim" sortOrder="10">
+                    <resource id="RetailDirect_GiftClaim::GiftClaim_save" title="Save GiftClaim" sortOrder="10"/>
+                    <resource id="RetailDirect_GiftClaim::GiftClaim_delete" title="Delete GiftClaim" sortOrder="20"/>
+                    <resource id="RetailDirect_GiftClaim::GiftClaim_update" title="Update GiftClaim" sortOrder="30"/>
+                    <resource id="RetailDirect_GiftClaim::GiftClaim_view" title="View GiftClaim" sortOrder="40"/>
+                </resource>
+            </resource>
+        </resources>
+    </acl>
+</config>

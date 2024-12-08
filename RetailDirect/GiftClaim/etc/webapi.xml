@@ -1,0 +1,33 @@
+<?xml version="1.0" ?>
+<routes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Webapi:etc/webapi.xsd">
+    <route url="/V1/retaildirect-giftclaim/giftclaim" method="POST">
+        <service class="RetailDirect\GiftClaim\Api\GiftClaimRepositoryInterface" method="save"/>
+        <resources>
+            <resource ref="RetailDirect_GiftClaim::GiftClaim_save"/>
+        </resources>
+    </route>
+    <route url="/V1/retaildirect-giftclaim/giftclaim/search" method="GET">
+        <service class="RetailDirect\GiftClaim\Api\GiftClaimRepositoryInterface" method="getList"/>
+        <resources>
+            <resource ref="RetailDirect_GiftClaim::GiftClaim_view"/>
+        </resources>
+    </route>
+    <route url="/V1/retaildirect-giftclaim/giftclaim/:giftclaimId" method="GET">
+        <service class="RetailDirect\GiftClaim\Api\GiftClaimRepositoryInterface" method="get"/>
+        <resources>
+            <resource ref="RetailDirect_GiftClaim::GiftClaim_view"/>
+        </resources>
+    </route>
+    <route url="/V1/retaildirect-giftclaim/giftclaim/:giftclaimId" method="PUT">
+        <service class="RetailDirect\GiftClaim\Api\GiftClaimRepositoryInterface" method="save"/>
+        <resources>
+            <resource ref="RetailDirect_GiftClaim::GiftClaim_update"/>
+        </resources>
+    </route>
+    <route url="/V1/retaildirect-giftclaim/giftclaim/:giftclaimId" method="DELETE">
+        <service class="RetailDirect\GiftClaim\Api\GiftClaimRepositoryInterface" method="deleteById"/>
+        <resources>
+            <resource ref="RetailDirect_GiftClaim::GiftClaim_delete"/>
+        </resources>
+    </route>
+</routes>
